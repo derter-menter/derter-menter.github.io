@@ -1,0 +1,26 @@
+
+body {
+  background-color: lightcyan;
+}
+
+.b {
+    background-color: darkblue;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+a button {
+  color: white;
+}
+
+.center {
+  width: 70px;
+  height: 300px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
