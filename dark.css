@@ -1,0 +1,23 @@
+body {
+  background-color: black;
+}
+
+.b {
+  background-color: #D3D3D3;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+a button {
+  color: white;
+}
+
+.container {
+  text-align: center;
+  width: auto;
+  margin: auto;
+}
