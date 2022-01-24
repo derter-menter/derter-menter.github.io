@@ -1,4 +1,3 @@
-<style>
 body {
   background-color: black;
 }
@@ -14,7 +13,7 @@ body {
 }
 
 a button {
-  color: white;
+  color: black;
 }
 .dt {
  color: white;  
@@ -24,4 +23,3 @@ a button {
   width: auto;
   margin: auto;
 }
-</style>
