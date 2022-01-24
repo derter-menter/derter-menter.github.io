@@ -1,25 +1,23 @@
+<style>
 body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
   background-color: black;
-}
-
-.b {
-  background-color: #D3D3D3;
-  border: none;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  display: inline-block;
-}
-
-a button {
   color: white;
 }
-.dt {
- color: white;  
+</style>
+
+
+<button onclick="myFunction()">Toggle dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
 }
-.container {
-  text-align: center;
-  width: auto;
-  margin: auto;
-}
+</script>
