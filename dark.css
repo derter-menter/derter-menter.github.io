@@ -2,6 +2,10 @@ body {
   background-color: black;
 }
 
+a:active, a:visited, a:link {
+  color:#348ceb
+  }
+
 .b {
   background-color: lightgray;
   border: none;
