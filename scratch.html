@@ -2,33 +2,48 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" href="styles.css">
-<title> Scratch - dertermenter</title>
+	<link rel="stylesheet" href="/src/styles.css">
+	<title>dertermenter - Scratch</title>
 </head>
 
 <body>
-<div class="container">
-
-<a href='/'><button class="b /">Home</button></a>
-<a href='scratch'><button class="b scratch">Scratch</button></a>
-<a href='youtube'><button class="b yotube">YouTube</button></a>
-<a href='github'><button class="b github">Github</button></a>
-<br>
-<img src='https://u.cubeupload.com/Cruncherbones/cooltext402266551601.png'>
-<br>
-<p><a href='https://scratch.mit.edu/'>Scratch</a> is a block based programming language. I got interested back in November 2015 and created an account on the 28th of November. 
-I have not looked back since, creating about 250 (bad) projects on the site. These projects were bad, so I have unshared every awful project since 2020, but I'm still happy I made them.</p>
-This is my latest project:
-<br>
-
-<iframe src="https://scratch.mit.edu/projects/625523008/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-
-<br>
-<p> In December 2020, after posting a suggestion on former Scratch Team member <a href='https://scratch.mit.edu/users/amylaser/'>amylaser's</a> profile, she redirected me to the forums, so I made <a title="It was a duplicate of the 3rd biggest suggestion topic lol" href='https://scratch.mit.edu/discuss/topic/462613/'>my suggestion</a> and I got really into the forums!
-I mostly got into suggestions; I love expressing my opinion. I was not the best forumer, but I think I have got better. I joined <a href='https://scratch.mit.edu/studios/30136012/'>The Forum Helpers</a> in March and I now think I can become a manager, but no one has suggested me yet. Hope someone does soon lol!</p>
-<p> can look at my posts <a title = "Ocular, the all in one forum search tool for scratch" href='https://ocular.jeffalo.net/user/dertermenter'>here</a> and my forum stats (which have dwindled a lot lol) <a title="postpercent, the all in one forum statistics tool for scratch" href='https://postpercent.rirurin.com/users/dertermenter'>here</a>.</p>
-
-</div>
-
+	<div class="header">
+		<a href='/' class="b">
+			Home
+		</a>
+		<a href='/scratch.html' class="b">
+			Scratch
+		</a>
+		<a href='/youtube.html' class="b">
+			YouTube
+		</a>
+		<a href='/github.html' class="b">
+			Github
+		</a>
+	</div>
+	<main>
+		<img src='https://u.cubeupload.com/Cruncherbones/cooltext402266551601.png'>
+		<p>
+			<a href='https://scratch.mit.edu/'>Scratch</a> is a block based programming language. I got interested back in November 2015 and created an account on the 28th of November. I have not looked back since, creating about 250 (bad) projects on the site. These projects were bad, so I have unshared every awful project since 2020, but I'm still happy I made them.
+		</p>
+		This is my latest project:<br>
+		<iframe src="/src/loading-iFrame.html" id="scratchIframe" width="485" height="402" scrolling="no" allow="fullscreen"></iframe>
+		<br>
+		<p>
+			In December 2020, after posting a suggestion on former Scratch Team member <a href='https://scratch.mit.edu/users/amylaser/'>amylaser's</a> profile, she redirected me to the forums, so I made <a title="It was a duplicate of the 3rd biggest suggestion topic lol" href='https://scratch.mit.edu/discuss/topic/462613/'>my suggestion</a> and I got really into the forums! I mostly got into suggestions; I love expressing my opinion. I was not the best forumer, but I think I have got better. I joined <a href='https://scratch.mit.edu/studios/30136012/'>The Forum Helpers</a> in March and I now think I can become a manager, but no one has suggested me yet. Hope someone does soon lol!</p>
+		<p>
+			can look at my posts <a title = "Ocular, the all in one forum search tool for scratch" href='https://ocular.jeffalo.net/user/dertermenter'>here</a> and my forum stats (which have dwindled a lot lol) <a title="postpercent, the all in one forum statistics tool for scratch" href='https://postpercent.rirurin.com/users/dertermenter'>here</a>.
+		</p>
+	</main>
+	<script type="text/javascript">
+		const scratch = document.querySelector("#scratchIframe")
+		fetch("/src/latest.json")
+			.then(res => res.json())
+			.then(data => {
+				console.log(data)
+				scratch.src = "//scratch.mit.edu/projects/" + data.scratch.toString() + "/embed"
+			})
+	</script>
 </body>
+
 </html>
