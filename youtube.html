@@ -2,39 +2,24 @@
 <html lang="en">
 
 <head>
-<link rel="stylesheet" href="/src/styles.css">
+<link rel="stylesheet" href="styles.css">
 <title>YouTube - dertermenter</title>
 </head>
   
 <body>
-	<div class="header">
-		<a href='/' class="b">
-			Home
-		</a>
-		<a href='/scratch.html' class="b">
-			Scratch
-		</a>
-		<a href='/youtube.html' class="b">
-			YouTube
-		</a>
-		<a href='/github.html' class="b">
-			Github
-		</a>
-	</div>
-	<main>
-		<img src='https://u.cubeupload.com/Cruncherbones/cooltext402658688313.png'>
-		<p>I usually just upload videos of different football games I play. <a href=https://www.youtube.com/channel/UCKA4top0zmSO_FyoVzA9lMA/>my channel</a>.</p>
-<p>latest video:</p>
-<iframe width="560" height="315" src="/src/loading-iFrame.html" title="YouTube video player" id="youtubeIframe" allow="fullscreen"></iframe>
-	</main>
-	<script type="text/javascript">
-		const youtube = document.querySelector("#youtubeIframe")
-		fetch("/src/latest.json")
-			.then(res => res.json())
-			.then(data => {
-				youtube.src = "//youtube.com/embed/" + data.youtube
-			})
-	</script>
-</body>
+<div class="container">
 
+<a href='/'><button class="b /">Home</button></a>
+<a href='scratch'><button class="b scratch">Scratch</button></a>
+<a href='youtube'><button class="b yotube">YouTube</button></a>
+<a href='github'><button class="b github">Github</button></a>
+<br>
+<img src='https://u.cubeupload.com/Cruncherbones/cooltext402658688313.png'>
+<p>I usually just upload videos of different football games I play. <a href=https://www.youtube.com/channel/UCKA4top0zmSO_FyoVzA9lMA/>my channel</a>.</p>
+latest video:
+  <br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5WWflFxUZSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+</body>
 <html>
