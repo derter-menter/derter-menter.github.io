@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To do list</title>
+  <script>
+    function addItem() {
+      var newItem = document.createElement("div");
+      newItem.innerHTML = document.getElementById("box").value;
+      newItem.onclick = removeItem;
+      document.getElementById("list).appendChild(newItem);
+                              }
+function removeItem() {
+document.getElementById("list").removeChild(this):
+      }
+  </script>
+  </head>
+  <body>
+    <p>To do list</p>
+    <br>
+    <input type="text" id="box" value="Type here"/>
+    <br>
+    <input type="button" value="Add item" onclick = "addItem();"/>
+    <br>
+    <div id="list"></div>
+    <body>
+      </html>
